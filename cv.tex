@@ -1,0 +1,220 @@
+% LaTeX Curriculum Vitae Template
+%
+% Copyright (C) 2004-2009 Jason Blevins <jrblevin@sdf.lonestar.org>
+% http://jblevins.org/projects/cv-template/
+%
+% You may use use this document as a template to create your own CV
+% and you may redistribute the source code freely. No attribution is
+% required in any resulting documents. I do ask that you please leave
+% this notice and the above URL in the source code if you choose to
+% redistribute this file.
+
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{etaremune}
+\usepackage{microtype}
+% Comment the following lines to use the default Computer Modern font
+% instead of the Palatino font provided by the mathpazo package.
+% Remove the 'osf' bit if you don't like the old style figures.
+%\usepackage[T1]{fontenc}
+%\usepackage[sc,osf]{mathpazo}
+
+% Set your name here
+\def\name{Semyeong Oh}
+
+% Replace this with a link to your CV if you like, or set it empty
+% (as in \def\footerlink{}) to remove the link in the footer:
+\def\footerlink{http://jblevins.org/projects/cv-template/}
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor = blue,
+  pdfauthor = {\name},
+  pdfkeywords = {economics, statistics, mathematics},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+  body={6.5in, 8.75in},
+  left=1.0in,
+  top=1.0in
+}
+
+\usepackage{aas_macros}
+\usepackage{amsmath,amssymb}
+\newcommand{\lt}{\ensuremath{<}}
+
+% Customize page headers
+\pagestyle{myheadings}
+\markright{\name}
+\thispagestyle{empty}
+
+% Custom section fonts
+\usepackage{sectsty}
+\sectionfont{\rmfamily\mdseries\Large}
+\subsectionfont{\rmfamily\mdseries\itshape\large}
+
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+% Make lists without bullets
+\renewenvironment{itemize}{
+  \begin{list}{}{
+    \setlength{\leftmargin}{1.5em}
+  }
+}{
+  \end{list}
+}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rhead{Page \thepage \hspace{1pt} of \pageref{LastPage}}
+\usepackage[scaled=.90]{helvet}% Helvetica, served as a model for arial
+
+%\usepackage{titlesec}
+%\titleformat{\section}
+%  {\normalfont\sffamily\scshape\Large}
+%  {\thesection}{1em}{}
+
+\newcommand*\arxiv[1]{\href{https://arxiv.org/abs/#1}{arXiv:#1}}
+\newcommand{\etal}{\textit{et al}.}
+
+\begin{document}
+
+% Place name at left
+{\huge \name}
+
+% Alternatively, print name centered and bold:
+%\centerline{\huge \bf \name}
+
+\vspace{0.1in}
+
+\begin{minipage}{0.45\linewidth}
+  Princeton University \\
+  Department of Astrophysical Sciences \\
+  4 Ivy Ln, Princeton, NJ 08540
+\end{minipage}
+\begin{minipage}{0.45\linewidth}
+  \begin{tabular}{ll}
+    Email: & \href{mailto:semyeong@astro.princeton.edu}{\tt semyeong@astro.princeton.edu}\\
+    Homepage: & \href{http://smoh.space}{\tt http://smoh.space} \\
+  \end{tabular}
+\end{minipage}
+
+
+\section*{Research Interests}
+
+
+\section*{Education}
+
+\begin{itemize}
+  \setlength\itemsep{0.2em}
+  \item Ph.D. Astrophysics, Princeton University, 2018. 8. (expected)
+    advisor: David N. Spergel
+
+  \item M.A. Astrophysics, Princeton University, 2015. 6.
+
+  %\item Integrated MA/PhD Program in Astronomy\\
+  %  left in 2nd yr with no degree conferred (advisor: Jong-Hak Woo)
+
+  \item B.Sc. Physics, Seoul National University, 2011. 2.
+\end{itemize}
+
+
+\section*{Publications}
+
+\begin{etaremune}
+  %\item {\it Kronos \& Krios: Evidence for accretion of rocky planets in a comoving pair of sun-like stars},
+  %  submitted 2017,
+  %  {{\bf {Oh}, S.}, {Price-Whelan}, A.~M., {Brewer}, J.~M. \etal}
+
+  \item {\it Comoving Stars in Gaia DR1: An Abundance of Very Wide Separation Comoving Pairs},
+    \aj, 153, 257, 2017, {{\bf {Oh}, S.}, {Price-Whelan}, A.~M., {Hogg}, D.~W. \etal}
+    \arxiv{1612.02440}
+
+  \item {\it Testing the Presence of Multiple Photometric Components in Nearby Early-type Galaxies using SDSS},
+    \apj, 836, 115, 2017,
+    {{\bf {Oh}, S.}, {Greene}, J.~E., {Lackner}, C.~N.}
+		\arxiv{1612.06495}
+
+  \item {\it The Active Galactic Nucleus Population in X-Ray-selected Galaxy Groups at $0.5 < z < 1.1$},
+    \apj, 790, 43, 2014,
+    {{\bf {Oh}, S.}, {Mulchaey}, J.~S., {Woo}, J.-H. \etal.}
+		\arxiv{1406.3059}
+
+	\item {\it The Extended Narrow-line Region of Two Type-I Quasi-stellar Objects},
+    \apj, 767, 117, 2013,
+    {{\bf {Oh}, S.}, {Woo}, J.-H., {Bennert}, V.~N. \etal}\\
+    \arxiv{1303.6212}
+\end{etaremune}
+
+\subsection*{Proceedings}
+
+\begin{etaremune}
+  \item {Detecting Gas Outflows in Type-2 AGNs Selected from the Sloan Digital Sky Survey},
+  IAUS, 292, 2013,
+  {{Bae}, H.-J. and {Woo}, J.-H. and {\bf {Oh}, S.}}
+\end{etaremune}
+
+\section*{Talks}
+
+\begin{itemize}
+  \setlength\itemsep{0em}
+  \item 2017-05-11 Comoving stars in Gaia DR 1, Princeton Thunch, Princeton
+  \item 2017-02-00 Comoving stars in Gaia DR 1, AMNH, NY
+  \item 2012-08-00 Title, IAU General Assembly IAUS 292, Beijing, China (Poster)
+  \item 2012-06-00 Black Hole Universe 2012, Bamberg, Germany (Poster)
+  \item 2011-10-00 Title, Korean Astronomical Society Fall Meeting, Jeju, Korea
+  \item 2011-04-00 Title, Korean Astronomical Society Spring Meeting, Chung-buk, Korea (Poster)
+\end{itemize}
+
+\section*{Honors \& Awards}
+
+\begin{itemize}
+  \setlength\itemsep{0em}
+  \item 2012-08 -- 2013-02 Graduate Fellowship, Seoul National University
+  \item 2011-03 -- 2012-08 Brain Korea 21 Graduate Scholarship, Seoul National University
+  \item 2007-2011 National Science \& Engineering Scholarship, Korean Student Aid Foundation
+\end{itemize}
+
+\section*{Observing}
+\begin{itemize}
+  \item 2017-03 Hiltner 2.4m, MDM Observatory, AZ
+\end{itemize}
+
+\section*{Teaching}
+
+\begin{itemize}
+  \setlength\itemsep{0em}
+  \item Assistant in Instruction, Princeton University
+    AST401 Cosmology by Neta Bahcall, 2015
+  \item Assistant in Instruction, Princeton University
+    AST401 Cosmology by Neta Bahcall, 2013
+\end{itemize}
+
+\bigskip
+
+% Footer
+\begin{center}
+  \begin{footnotesize}
+    Last updated: \today \\
+  \end{footnotesize}
+\end{center}
+
+\end{document}

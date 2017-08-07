@@ -1,3 +1,4 @@
+% SMOH CV
 % LaTeX Curriculum Vitae Template
 %
 % Copyright (C) 2004-2009 Jason Blevins <jrblevin@sdf.lonestar.org>
@@ -13,6 +14,7 @@
 
 \usepackage{hyperref}
 \usepackage{geometry}
+\usepackage{color}
 \usepackage{etaremune}
 \usepackage{microtype}
 % Comment the following lines to use the default Computer Modern font
@@ -21,19 +23,24 @@
 %\usepackage[T1]{fontenc}
 %\usepackage[sc,osf]{mathpazo}
 
+% Custom section
+\usepackage{titlesec}
+\titleformat{\section}[runin]
+  {\rmfamily\mdseries\Large}{\thesection}{1em}{}
+\titleformat{\subsection}[runin]
+  {\rmfamily\mdseries\itshape\large}{\thesection}{1em}{}
+
 % Set your name here
 \def\name{Semyeong Oh}
 
-% Replace this with a link to your CV if you like, or set it empty
-% (as in \def\footerlink{}) to remove the link in the footer:
-\def\footerlink{http://jblevins.org/projects/cv-template/}
-
+\definecolor{cerulean}{rgb}{0.0, 0.48, 0.65}
+\definecolor{ceruleanblue}{rgb}{0.16, 0.32, 0.75}
+\definecolor{oceanboatblue}{rgb}{0.0, 0.47, 0.75}
 % The following metadata will show up in the PDF properties
 \hypersetup{
   colorlinks = true,
-  urlcolor = blue,
+  urlcolor = oceanboatblue,
   pdfauthor = {\name},
-  pdfkeywords = {economics, statistics, mathematics},
   pdftitle = {\name: Curriculum Vitae},
   pdfsubject = {Curriculum Vitae},
   pdfpagemode = UseNone
@@ -47,17 +54,13 @@
 
 \usepackage{aas_macros}
 \usepackage{amsmath,amssymb}
-\newcommand{\lt}{\ensuremath{<}}
+\newcommand{\lt}{\ensuremath{<}}    % because I screwed up in a paper title...
 
 % Customize page headers
 \pagestyle{myheadings}
 \markright{\name}
 \thispagestyle{empty}
 
-% Custom section fonts
-\usepackage{sectsty}
-\sectionfont{\rmfamily\mdseries\Large}
-\subsectionfont{\rmfamily\mdseries\itshape\large}
 
 % Other possible font commands include:
 % \ttfamily for teletype,
@@ -87,10 +90,6 @@
 \rhead{Page \thepage \hspace{1pt} of \pageref{LastPage}}
 \usepackage[scaled=.90]{helvet}% Helvetica, served as a model for arial
 
-%\usepackage{titlesec}
-%\titleformat{\section}
-%  {\normalfont\sffamily\scshape\Large}
-%  {\thesection}{1em}{}
 
 \newcommand*\arxiv[1]{\href{https://arxiv.org/abs/#1}{arXiv:#1}}
 \newcommand{\etal}{\textit{et al}.}
@@ -106,8 +105,8 @@
 \vspace{0.1in}
 
 \begin{minipage}{0.45\linewidth}
-  Princeton University \\
   Department of Astrophysical Sciences \\
+  Princeton University \\
   4 Ivy Ln, Princeton, NJ 08540
 \end{minipage}
 \begin{minipage}{0.45\linewidth}
@@ -118,8 +117,11 @@
 \end{minipage}
 
 
-\section*{Research Interests}
+\section*{Research Interests}~\\
 
+\vspace{-0.3cm}
+dynamics of disruption of stellar multiples revealed by {\it Gaia};
+scientific applications of statistical inference and machine learning
 
 \section*{Education}
 
@@ -138,11 +140,13 @@
 
 
 \section*{Publications}
+\href{https://arxiv.org/find/all/1/all:+AND+semyeong+oh/0/1/0/all/0/1}{arXiv}
+\href{http://adsabs.harvard.edu/cgi-bin/nph-abs_connect?library&libname=Semyeong+Oh&libid=4e8800e01f}{ADS}
 
 \begin{etaremune}
-  %\item {\it Kronos \& Krios: Evidence for accretion of rocky planets in a comoving pair of sun-like stars},
-  %  submitted 2017,
-  %  {{\bf {Oh}, S.}, {Price-Whelan}, A.~M., {Brewer}, J.~M. \etal}
+  % \item {\it Kronos \& Krios: Evidence for accretion of rocky planets in a comoving pair of sun-like stars},
+  %   submitted 2017,
+  %   {{\bf {Oh}, S.}, {Price-Whelan}, A.~M., {Brewer}, J.~M. \etal}
 
   \item {\it Comoving Stars in Gaia DR1: An Abundance of Very Wide Separation Comoving Pairs},
     \aj, 153, 257, 2017, {{\bf {Oh}, S.}, {Price-Whelan}, A.~M., {Hogg}, D.~W. \etal}
@@ -155,13 +159,12 @@
 
   \item {\it The Active Galactic Nucleus Population in X-Ray-selected Galaxy Groups at $0.5 < z < 1.1$},
     \apj, 790, 43, 2014,
-    {{\bf {Oh}, S.}, {Mulchaey}, J.~S., {Woo}, J.-H. \etal.}
+    {{\bf {Oh}, S.}, {Mulchaey}, J.~S., {Woo}, J.-H. \etal}
 		\arxiv{1406.3059}
 
 	\item {\it The Extended Narrow-line Region of Two Type-I Quasi-stellar Objects},
     \apj, 767, 117, 2013,
-    {{\bf {Oh}, S.}, {Woo}, J.-H., {Bennert}, V.~N. \etal}\\
-    \arxiv{1303.6212}
+    {{\bf {Oh}, S.}, {Woo}, J.-H., {Bennert}, V.~N. \etal} \arxiv{1303.6212}
 \end{etaremune}
 
 \subsection*{Proceedings}
@@ -174,15 +177,15 @@
 
 \section*{Talks}
 
-\begin{itemize}
+\begin{etaremune}
   \setlength\itemsep{0em}
-  \item 2017-05-11 Comoving stars in Gaia DR 1, Princeton Thunch, Princeton
-  \item 2017-02-00 Comoving stars in Gaia DR 1, AMNH, NY
-  \item 2012-08-00 Title, IAU General Assembly IAUS 292, Beijing, China (Poster)
-  \item 2012-06-00 Black Hole Universe 2012, Bamberg, Germany (Poster)
-  \item 2011-10-00 Title, Korean Astronomical Society Fall Meeting, Jeju, Korea
-  \item 2011-04-00 Title, Korean Astronomical Society Spring Meeting, Chung-buk, Korea (Poster)
-\end{itemize}
+  \item 2017-05 Comoving stars in Gaia DR 1, Thunch, Princeton University
+  \item 2017-02 Comoving stars in Gaia DR 1, AMNH, NY
+  \item 2012-08 Outflows in Two type-I PG QSOs, IAU General Assembly IAUS 292, Beijing, China (Poster)
+  \item 2012-06 Spatially-resolved narrow-line region of two type-I QSOs, Black Hole Universe 2012, Bamberg, Germany (Poster)
+  \item 2011-10 Narrow-line regions of type I QSOs, Korean Astronomical Society Fall Meeting, Jeju, Korea
+  \item 2011-04 Narrow-line region of two radio-quiet quasars, Korean Astronomical Society Spring Meeting, Chung-buk, Korea (Poster)
+\end{etaremune}
 
 \section*{Honors \& Awards}
 
@@ -190,22 +193,22 @@
   \setlength\itemsep{0em}
   \item 2012-08 -- 2013-02 Graduate Fellowship, Seoul National University
   \item 2011-03 -- 2012-08 Brain Korea 21 Graduate Scholarship, Seoul National University
-  \item 2007-2011 National Science \& Engineering Scholarship, Korean Student Aid Foundation
+  \item 2007-03 -- 2011-02 National Science \& Engineering Scholarship, Korean Student Aid Foundation
 \end{itemize}
 
 \section*{Observing}
 \begin{itemize}
-  \item 2017-03 Hiltner 2.4m, MDM Observatory, AZ
+  \item 2017-03 Hiltner 2.4m, MDM Observatory, AZ (6 nights)
 \end{itemize}
 
 \section*{Teaching}
 
 \begin{itemize}
   \setlength\itemsep{0em}
-  \item Assistant in Instruction, Princeton University
-    AST401 Cosmology by Neta Bahcall, 2015
-  \item Assistant in Instruction, Princeton University
-    AST401 Cosmology by Neta Bahcall, 2013
+  \item 2015 Spring, Assistant in Instruction, Princeton University
+    AST401 Cosmology by Neta Bahcall
+  \item 2013 Spring, Assistant in Instruction, Princeton University
+    AST401 Cosmology by Neta Bahcall
 \end{itemize}
 
 \bigskip

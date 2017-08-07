@@ -23,6 +23,13 @@
 %\usepackage[T1]{fontenc}
 %\usepackage[sc,osf]{mathpazo}
 
+% This should come before header stuff.
+\geometry{
+  body={6.5in, 8.75in},
+  left=1.0in,
+  top=1.0in
+}
+
 % Custom section
 \usepackage{titlesec}
 \titleformat{\section}[runin]
@@ -30,44 +37,12 @@
 \titleformat{\subsection}[runin]
   {\rmfamily\mdseries\itshape\large}{\thesection}{1em}{}
 
-% Set your name here
-\def\name{Semyeong Oh}
-
-\definecolor{cerulean}{rgb}{0.0, 0.48, 0.65}
-\definecolor{ceruleanblue}{rgb}{0.16, 0.32, 0.75}
-\definecolor{oceanboatblue}{rgb}{0.0, 0.47, 0.75}
-% The following metadata will show up in the PDF properties
-\hypersetup{
-  colorlinks = true,
-  urlcolor = oceanboatblue,
-  pdfauthor = {\name},
-  pdftitle = {\name: Curriculum Vitae},
-  pdfsubject = {Curriculum Vitae},
-  pdfpagemode = UseNone
-}
-
-\geometry{
-  body={6.5in, 8.75in},
-  left=1.0in,
-  top=1.0in
-}
-
-\usepackage{aas_macros}
-\usepackage{amsmath,amssymb}
-\newcommand{\lt}{\ensuremath{<}}    % because I screwed up in a paper title...
-
-% Customize page headers
-\pagestyle{myheadings}
-\markright{\name}
-\thispagestyle{empty}
-
-
-% Other possible font commands include:
-% \ttfamily for teletype,
-% \sffamily for sans serif,
-% \bfseries for bold,
-% \scshape for small caps,
-% \normalsize, \large, \Large, \LARGE sizes.
+% Custom header for page number
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\pagestyle{fancy}
+\fancyhf{}    % clear all header and footer fields
+\rhead{Page \thepage \hspace{1pt} of \pageref*{LastPage}}
 
 % Don't indent paragraphs.
 \setlength\parindent{0em}
@@ -81,24 +56,31 @@
   \end{list}
 }
 
-\usepackage{fancyhdr}
-\usepackage{lastpage}
+% Set your name here
+\def\name{Semyeong Oh}
 
-\pagestyle{fancy}
-\fancyhf{}
+\definecolor{oceanboatblue}{rgb}{0.0, 0.47, 0.75}
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor = oceanboatblue,
+  pdfauthor = {\name},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
 
-\rhead{Page \thepage \hspace{1pt} of \pageref{LastPage}}
-\usepackage[scaled=.90]{helvet}% Helvetica, served as a model for arial
-
-
+\usepackage{aas_macros}
+\usepackage{amsmath,amssymb}
+\newcommand{\lt}{\ensuremath{<}}    % because I screwed up in a paper title...
 \newcommand*\arxiv[1]{\href{https://arxiv.org/abs/#1}{arXiv:#1}}
 \newcommand{\etal}{\textit{et al}.}
+
 
 \begin{document}
 
 % Place name at left
 {\huge \name}
-
 % Alternatively, print name centered and bold:
 %\centerline{\huge \bf \name}
 

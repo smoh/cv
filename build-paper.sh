@@ -15,8 +15,7 @@ then
   conda install -c conda-forge -c pkgw-forge tectonic
 
   # Build the paper using tectonic
-  cd paper
-  tectonic ms.tex --print
+  tectonic cv.tex --print
 
   # Force push the paper to GitHub
   cd $TRAVIS_BUILD_DIR

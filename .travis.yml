@@ -17,3 +17,5 @@ addons:
     s3_region: "us-east-1"
     paths:
     - cv.pdf
+    target-paths:
+    - "downloads/"

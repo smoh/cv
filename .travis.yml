@@ -1,5 +1,8 @@
 sudo: false
 language: generic
+branches:
+  only:
+  - master
 matrix:
   include:
     - os: linux
@@ -9,3 +12,8 @@ script: |
   then
     source build-paper.sh
   fi
+addons:
+  artifacts:
+    s3_region: "us-east-1"
+    paths:
+    - cv.pdf

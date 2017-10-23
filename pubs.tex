@@ -1,0 +1,131 @@
+% SMOH publication list
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage{hyperref}
+\usepackage[includehead]{geometry}
+\usepackage{color}
+\usepackage{etaremune}
+\usepackage{microtype}
+% Comment the following lines to use the default Computer Modern font
+% instead of the Palatino font provided by the mathpazo package.
+% Remove the 'osf' bit if you don't like the old style figures.
+%\usepackage[T1]{fontenc}
+%\usepackage[sc,osf]{mathpazo}
+
+% This should come before header stuff.
+\geometry{
+  body={6.5in, 8.75in},
+  left=1.0in,
+  top=1.0in
+}
+
+% Custom section
+\usepackage{titlesec}
+\titleformat{\section}[runin]
+  {\rmfamily\mdseries\Large}{\thesection}{1em}{}
+\titleformat{\subsection}[runin]
+  {\rmfamily\mdseries\itshape\large}{\thesection}{1em}{}
+
+% Custom header for page number
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\pagestyle{fancy}
+\fancyhf{}    % clear all header and footer fields
+\lhead{{\LARGE Semyeong Oh}}
+\rhead{Publications -- Page \thepage \hspace{1pt} of \pageref*{LastPage}}
+\chead{}
+\renewcommand{\headrulewidth}{0pt}
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+% Make lists without bullets
+\renewenvironment{itemize}{
+  \begin{list}{}{
+    \setlength{\leftmargin}{1.5em}
+  }
+}{
+  \end{list}
+}
+
+% Set your name here
+\def\name{Semyeong Oh}
+
+\definecolor{oceanboatblue}{rgb}{0.0, 0.47, 0.75}
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor = blue,
+  pdfauthor = {\name},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+\usepackage{aas_macros}
+\usepackage{amsmath,amssymb}
+\newcommand{\lt}{\ensuremath{<}}    % because I screwed up in a paper title...
+\newcommand*\arxiv[1]{\href{https://arxiv.org/abs/#1}{[arXiv:#1]}}
+\newcommand{\etal}{\textit{et al}.}
+
+\bibliographystyle{plain}
+
+\begin{document}
+
+\noindent
+Links to \href{https://arxiv.org/find/all/1/all:+AND+semyeong+oh/0/1/0/all/0/1}{arXiv}
+\href{http://adsabs.harvard.edu/cgi-bin/nph-abs_connect?library&libname=Semyeong+Oh&libid=4e8800e01f}{ADS}
+
+\begin{etaremune}
+\item {\it Kronos \& Krios: Evidence for accretion of rocky planets in a comoving pair of sun-like stars}\\
+    {{\bf {Oh}, S.}, {Price-Whelan}, A.~M., {Brewer}, J.~M., {Hogg}, D.~W.,
+      {Spergel}, D.~N., {Myles}, J.},
+    2017, submitted
+    \arxiv{1709.05344}
+
+  \item {\it Spectroscopic Confirmation of Very-wide stellar binaries and
+      large-separation comoving pairs from Gaia DR1}\\
+    {{Price-Whelan}, A.~M., {\bf {Oh}, S.}, {Spergel}, D.~N.}, 2017, submitted
+    \arxiv{1709.03532}
+
+  \item {\it Comoving Stars in Gaia DR1: An Abundance of Very Wide Separation Comoving Pairs}\\
+    {{\bf {Oh}, S.}, {Price-Whelan}, A.~M., {Hogg}, D.~W.,
+      {Morton}, T.~D., {Spergel}, D.~N.}, \aj, 153, 257, 2017
+    \arxiv{1612.02440}
+
+  \item {\it Testing the Presence of Multiple Photometric Components in Nearby Early-type Galaxies using SDSS}\\
+    {{\bf {Oh}, S.}, {Greene}, J.~E., {Lackner}, C.~N.}, \apj, 836, 115, 2017
+		\arxiv{1612.06495}
+
+  \item {\it The Active Galactic Nucleus Population in X-Ray-selected Galaxy Groups at $0.5 < z < 1.1$}\\
+    {{\bf {Oh}, S.}, {Mulchaey}, J.~S., {Woo}, J.-H., {Finoguenov}, A.,
+      {Tanaka}, M., {Cooper}, M.~C., {Ziparo}, F., {Bauer}, F.~E., {Matsuoka}, K.},
+    \apj, 790, 43, 2014
+		\arxiv{1406.3059}
+
+	\item {\it The Extended Narrow-line Region of Two Type-I Quasi-stellar Objects}\\
+    {{\bf {Oh}, S.}, {Woo}, J.-H., {Bennert}, V.~N., {Jungwiert}, B., {Haas},
+      M., {Leipski}, C., {Albrecht}, M.},
+    \apj, 767, 117, 2013 \arxiv{1303.6212}
+\end{etaremune}
+
+% \nocite{*}
+% \bibliography{smoh}
+
+\subsection*{Proceedings}
+
+\begin{etaremune}
+  \item {\it Detecting Gas Outflows in Type-2 AGNs Selected from the Sloan Digital Sky Survey}\\
+  {{Bae}, H.-J. and {Woo}, J.-H. and {\bf {Oh}, S.}}, IAUS, 292, 2013
+\end{etaremune}
+
+\bigskip
+
+% Footer
+\begin{center}
+  \begin{footnotesize}
+    Last updated: \today \\
+  \end{footnotesize}
+\end{center}
+
+\end{document}

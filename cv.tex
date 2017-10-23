@@ -13,28 +13,29 @@
 \documentclass[11pt,letterpaper]{article}
 
 \usepackage{hyperref}
-\usepackage{geometry}
+\usepackage[includehead]{geometry}
 \usepackage{color}
 \usepackage{etaremune}
 \usepackage{microtype}
+\usepackage{xhfill}        % horizontal lines
 % Comment the following lines to use the default Computer Modern font
 % instead of the Palatino font provided by the mathpazo package.
 % Remove the 'osf' bit if you don't like the old style figures.
-%\usepackage[T1]{fontenc}
+\usepackage[T1]{fontenc}
 %\usepackage[sc,osf]{mathpazo}
 
 % This should come before header stuff.
 \geometry{
   body={6.5in, 8.75in},
   left=1.0in,
-  top=1.0in
+  top=2.cm
 }
 
 % Custom section
 \usepackage{titlesec}
-\titleformat{\section}[runin]
-  {\rmfamily\mdseries\Large}{\thesection}{1em}{}
-\titleformat{\subsection}[runin]
+\titlespacing*{\section}{0pt}{2ex}{1ex}     % left before-sep after-sep
+\titleformat{\section}{\large\bf}{\thesection}{}{}
+\titleformat{\subsection}
   {\rmfamily\mdseries\itshape\large}{\thesection}{1em}{}
 
 % Custom header for page number
@@ -42,7 +43,10 @@
 \usepackage{lastpage}
 \pagestyle{fancy}
 \fancyhf{}    % clear all header and footer fields
-\rhead{Page \thepage \hspace{1pt} of \pageref*{LastPage}}
+\lhead{{\LARGE Semyeong Oh}}
+\rhead{Curriculum Vitae -- Page \thepage \hspace{1pt} of \pageref*{LastPage}}
+\chead{}
+\renewcommand{\headrulewidth}{0pt}
 
 % Don't indent paragraphs.
 \setlength\parindent{0em}
@@ -63,7 +67,7 @@
 % The following metadata will show up in the PDF properties
 \hypersetup{
   colorlinks = true,
-  urlcolor = oceanboatblue,
+  urlcolor = blue,
   pdfauthor = {\name},
   pdftitle = {\name: Curriculum Vitae},
   pdfsubject = {Curriculum Vitae},
@@ -76,32 +80,34 @@
 \newcommand*\arxiv[1]{\href{https://arxiv.org/abs/#1}{arXiv:#1}}
 \newcommand{\etal}{\textit{et al}.}
 
+\usepackage{array}
+\newcounter{rowcounter}
+\setcounter{rowcounter}{0}
+
+
 
 \begin{document}
 
 % Place name at left
-{\huge \name}
+% {\huge \name}
 % Alternatively, print name centered and bold:
 %\centerline{\huge \bf \name}
 
-\vspace{0.1in}
-
 \begin{minipage}{0.45\linewidth}
-  Department of Astrophysical Sciences \\
-  Princeton University \\
-  4 Ivy Ln, Princeton, NJ 08540
+ Department of Astrophysical Sciences \\
+ Princeton University \\
+ 4 Ivy Ln, Princeton, NJ 08540
 \end{minipage}
 \begin{minipage}{0.45\linewidth}
-  \begin{tabular}{ll}
-    Email: & \href{mailto:semyeong@astro.princeton.edu}{\tt semyeong@astro.princeton.edu}\\
-    Homepage: & \href{http://smoh.space}{\tt http://smoh.space} \\
-  \end{tabular}
+ \begin{tabular}{ll}
+   Email: & \href{mailto:semyeong@astro.princeton.edu}{\tt semyeong@astro.princeton.edu}\\
+   Homepage: & \href{http://smoh.space}{\tt http://smoh.space} \\
+ \end{tabular}
 \end{minipage}
 
 
-\section*{Research Interests}~\\
+\section*{Research Interests}
 
-\vspace{-0.3cm}
 dynamics of disruption of stellar multiples revealed by {\it Gaia};
 scientific applications of statistical inference and machine learning
 
@@ -120,67 +126,27 @@ scientific applications of statistical inference and machine learning
   \item B.Sc. Physics, Seoul National University, 2011. 2.
 \end{itemize}
 
-
-\section*{Publications}
-\href{https://arxiv.org/find/all/1/all:+AND+semyeong+oh/0/1/0/all/0/1}{arXiv}
-\href{http://adsabs.harvard.edu/cgi-bin/nph-abs_connect?library&libname=Semyeong+Oh&libid=4e8800e01f}{ADS}
-
-\begin{etaremune}
-  % \item {\it Kronos \& Krios: Evidence for accretion of rocky planets in a comoving pair of sun-like stars},
-  %   submitted 2017,
-  %   {{\bf {Oh}, S.}, {Price-Whelan}, A.~M., {Brewer}, J.~M. \etal}
-
-  \item {\it Spectroscopic Confirmation of Very-wide stellar binaries and
-      large-separation comoving pairs from Gaia DR1},
-    submitted, {{Price-Whelan}, A.~M., {\bf {Oh}, S.}, {Spergel}, D.~N.}
-    % \arxiv{}
-
-  \item {\it Comoving Stars in Gaia DR1: An Abundance of Very Wide Separation Comoving Pairs},
-    \aj, 153, 257, 2017, {{\bf {Oh}, S.}, {Price-Whelan}, A.~M., {Hogg}, D.~W. \etal}
-    \arxiv{1612.02440}
-
-  \item {\it Testing the Presence of Multiple Photometric Components in Nearby Early-type Galaxies using SDSS},
-    \apj, 836, 115, 2017,
-    {{\bf {Oh}, S.}, {Greene}, J.~E., {Lackner}, C.~N.}
-		\arxiv{1612.06495}
-
-  \item {\it The Active Galactic Nucleus Population in X-Ray-selected Galaxy Groups at $0.5 < z < 1.1$},
-    \apj, 790, 43, 2014,
-    {{\bf {Oh}, S.}, {Mulchaey}, J.~S., {Woo}, J.-H. \etal}
-		\arxiv{1406.3059}
-
-	\item {\it The Extended Narrow-line Region of Two Type-I Quasi-stellar Objects},
-    \apj, 767, 117, 2013,
-    {{\bf {Oh}, S.}, {Woo}, J.-H., {Bennert}, V.~N. \etal} \arxiv{1303.6212}
-\end{etaremune}
-
-\subsection*{Proceedings}
-
-\begin{etaremune}
-  \item {Detecting Gas Outflows in Type-2 AGNs Selected from the Sloan Digital Sky Survey},
-  IAUS, 292, 2013,
-  {{Bae}, H.-J. and {Woo}, J.-H. and {\bf {Oh}, S.}}
-\end{etaremune}
-
 \section*{Talks}
 
-\begin{etaremune}
-  \setlength\itemsep{0em}
-  \item 2017-05 Comoving stars in Gaia DR 1, Thunch, Princeton University
-  \item 2017-02 Comoving stars in Gaia DR 1, AMNH, NY
-  \item 2012-08 Outflows in Two type-I PG QSOs, IAU General Assembly IAUS 292, Beijing, China (Poster)
-  \item 2012-06 Spatially-resolved narrow-line region of two type-I QSOs, Black Hole Universe 2012, Bamberg, Germany (Poster)
-  \item 2011-10 Narrow-line regions of type I QSOs, Korean Astronomical Society Fall Meeting, Jeju, Korea
-  \item 2011-04 Narrow-line region of two radio-quiet quasars, Korean Astronomical Society Spring Meeting, Chung-buk, Korea (Poster)
-\end{etaremune}
+\begin{itemize}
+  \setlength{\itemsep}{0em}
+
+  \item Comoving stars in Gaia DR 1, Thunch, Princeton University, 2017 May
+  \item Comoving stars in Gaia DR 1, AMNH, NY, 2017 Feb
+  \item Outflows in Two type-I PG QSOs, IAU General Assembly IAUS 292, Beijing, China (Poster), 2012 Aug
+  \item Spatially-resolved narrow-line region of two type-I QSOs, Black Hole Universe 2012, Bamberg, Germany (Poster), 2012 Jun
+  \item Narrow-line regions of type I QSOs, Korean Astronomical Society meeting, Jeju, Korea, 2011 Oct
+  \item Narrow-line region of two radio-quiet quasars, Korean Astronomical Society meeting, Chung-buk, Korea (Poster), 2011 Apr
+\end{itemize}
 
 \section*{Honors \& Awards}
 
 \begin{itemize}
-  \setlength\itemsep{0em}
-  \item 2012-08 -- 2013-02 Graduate Fellowship, Seoul National University
-  \item 2011-03 -- 2012-08 Brain Korea 21 Graduate Scholarship, Seoul National University
-  \item 2007-03 -- 2011-02 National Science \& Engineering Scholarship, Korean Student Aid Foundation
+  \setlength{\itemsep}{0em}
+
+  \item Graduate Fellowship, Seoul National University, 2012-08 -- 2013-02
+  \item Brain Korea 21 Graduate Scholarship, Seoul National University, 2011-03 -- 2012-08
+	\item National Science \& Engineering Scholarship, Korean Student Aid Foundation, 2007-03 -- 2011-02
 \end{itemize}
 
 \section*{Observing}
@@ -192,10 +158,8 @@ scientific applications of statistical inference and machine learning
 
 \begin{itemize}
   \setlength\itemsep{0em}
-  \item 2015 Spring, Assistant in Instruction, Princeton University
-    AST401 Cosmology by Neta Bahcall
-  \item 2013 Spring, Assistant in Instruction, Princeton University
-    AST401 Cosmology by Neta Bahcall
+  \item 2015 Spring AST401 Cosmology, Princeton University (Assistant in Instruction)
+  \item 2013 Spring AST401 Cosmology, Princeton University (Assistant in Instruction)
 \end{itemize}
 
 \bigskip

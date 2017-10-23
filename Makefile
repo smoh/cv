@@ -7,7 +7,7 @@ CHECK_RERUN =
 
 NAME = cv
 
-all: ${NAME}.pdf
+all: cv.pdf pubs.pdf cv_pubs.pdf
 
 
 ${NAME}.pdf: ${NAME}.tex
@@ -16,6 +16,16 @@ ${NAME}.pdf: ${NAME}.tex
 	( grep "Rerun to get" ${NAME}.log && ${LATEX} ${NAME} ) || echo "Done."
 	( grep "Rerun to get" ${NAME}.log && ${LATEX} ${NAME} ) || echo "Done."
 
+pubs.pdf: pubs.tex
+	${LATEX} pubs
+	${LATEX} pubs
+	( grep "Rerun to get" pubs.log && ${LATEX} pubs ) || echo "Done."
+	( grep "Rerun to get" pubs.log && ${LATEX} pubs ) || echo "Done."
+
+cv_pubs.pdf: cv.pdf pubs.pdf
+	pdf-concat -o cv_pubs.pdf cv.pdf pubs.pdf
+
 clean:
-	${RM} $(foreach suff, ${TMP_SUFFS}, ${NAME}.${suff})
+	${RM} $(foreach suff, ${TMP_SUFFS}, cv.${suff})
+	${RM} $(foreach suff, ${TMP_SUFFS}, pubs.${suff})
 	${RM} *Notes.bib

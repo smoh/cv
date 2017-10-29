@@ -18,6 +18,5 @@ addons:
     paths:
     - cv.pdf
     - pubs.pdf
-    - cv_pubs.pdf
     target-paths:
     - "downloads/"

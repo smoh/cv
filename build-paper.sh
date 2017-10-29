@@ -17,7 +17,7 @@ then
   # Build the paper using tectonic
   tectonic cv.tex --print
   tectonic pubs.tex --print
-  pdfunite cv.pdf pubs.pdf cv_pubs.pdf
+  #pdfunite cv.pdf pubs.pdf cv_pubs.pdf
 
   # # Force push the paper to GitHub
   # cd $TRAVIS_BUILD_DIR

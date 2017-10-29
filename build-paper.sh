@@ -26,4 +26,4 @@ then
   # git add -f cv.pdf
   # git -c user.name='travis' -c user.email='travis' commit -m "building the paper"
   # git push -q -f https://$GITHUB_USER:$GITHUB_API_KEY@github.com/$TRAVIS_REPO_SLUG $TRAVIS_BRANCH-pdf
-# fi
+fi

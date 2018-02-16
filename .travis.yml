@@ -10,6 +10,7 @@ matrix:
 script: |
   if [[ $TEST_LANG == paper ]]
   then
+    cd academic
     source build-paper.sh
   fi
 addons:

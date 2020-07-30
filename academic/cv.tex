@@ -1,180 +1,76 @@
-% SMOH CV
-% LaTeX Curriculum Vitae Template
+% !TEX TS-program = luatex
+% Awesome Source CV LaTeX Template
 %
-% Copyright (C) 2004-2009 Jason Blevins <jrblevin@sdf.lonestar.org>
-% http://jblevins.org/projects/cv-template/
+% This template has been downloaded from:
+% https://github.com/darwiin/awesome-neue-latex-cv
 %
-% You may use use this document as a template to create your own CV
-% and you may redistribute the source code freely. No attribution is
-% required in any resulting documents. I do ask that you please leave
-% this notice and the above URL in the source code if you choose to
-% redistribute this file.
+% Author:
+% Christophe Roger (Darwiin)
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
 
-\documentclass[11pt,letterpaper]{article}
-
-\usepackage{hyperref}
-\usepackage[includehead]{geometry}
-\usepackage{color}
-\usepackage{etaremune}
-\usepackage{microtype}
-\usepackage{changepage}   % for the adjustwidth environment
-\usepackage{xhfill}        % horizontal lines
-% Comment the following lines to use the default Computer Modern font
-% instead of the Palatino font provided by the mathpazo package.
-% Remove the 'osf' bit if you don't like the old style figures.
-\usepackage[T1]{fontenc}
-%\usepackage[sc,osf]{mathpazo}
-
-% This should come before header stuff.
-\geometry{
-  body={6.5in, 8.75in},
-  left=1.0in,
-  top=2.cm
+\documentclass[localFont,alternative,11pt,showLinks]{yaac-another-awesome-cv}
+\name{Semyeong}{Oh}
+\tagline{Institute of Astronomy, University of Cambridge}
+% \photo{2.5cm}{darwiin}
+\socialinfo{
+	\linkedin{semyeong-oh}
+	\github{smoh}\\
+	\smartphone{+44 7535 539908}
+	\email{soh@ast.cam.ac.uk}\\
+	\address{Madingley Road, Cambridge, UK, CB3 0HA}\\
+	\website{https://smoh.space}{https://smoh.space}
 }
 
-% Custom section
-\usepackage{titlesec}
-\titlespacing*{\section}{0pt}{2ex}{1ex}     % left before-sep after-sep
-\titleformat{\section}{\Large\sffamily\color{indigodye}}{\thesection}{}{}
-\titleformat{\subsection}
-  {\rmfamily\mdseries\itshape\large}{\thesection}{1em}{}
+% Uncomment the following line and use a value from 1.5cm to 2.5cm
+%\setleftcolumnlength{2.5cm}
 
-% Custom header for page number
-\usepackage{fancyhdr}
-\usepackage{lastpage}
-\pagestyle{fancy}
-\fancyhf{}    % clear all header and footer fields
-\lhead{{\LARGE Semyeong Oh}}
-\rhead{Curriculum Vitae -- Page \thepage \hspace{1pt} of \pageref*{LastPage}}
-\chead{}
-\renewcommand{\headrulewidth}{0pt}
-
-% Don't indent paragraphs.
-\setlength\parindent{0em}
-
-% Make lists without bullets
-\renewenvironment{itemize}{
-  \begin{list}{}{
-    \setlength{\leftmargin}{1.em}
-  }
-}{
-  \end{list}
-}
-
-% Set your name here
-\def\name{Semyeong Oh}
-
-% \definecolor{oceanboatblue}{rgb}{0.0, 0.47, 0.75}
-\definecolor{independence}{HTML}{FF7700}
-\definecolor{indigodye}{HTML}{004777}
-\definecolor{redwood}{HTML}{DB5461}
-
-% The following metadata will show up in the PDF properties
-\hypersetup{
-  colorlinks = true,
-  urlcolor = redwood,
-  pdfauthor = {\name},
-  pdftitle = {\name: Curriculum Vitae},
-  pdfsubject = {Curriculum Vitae},
-  pdfpagemode = UseNone
-}
-
-\usepackage{aas_macros}
-\usepackage{amsmath,amssymb}
-\newcommand{\lt}{\ensuremath{<}}    % because I screwed up in a paper title...
-\newcommand*\arxiv[1]{\href{https://arxiv.org/abs/#1}{arXiv:#1}}
-\newcommand{\etal}{\textit{et al}.}
-
-\usepackage{array}
-\newcounter{rowcounter}
-\setcounter{rowcounter}{0}
-
-\usepackage{fontawesome5}
 
 
 \begin{document}
 
-% Place name at left
-% {\huge \name}
-% Alternatively, print name centered and bold:
-%\centerline{\huge \bf \name}
-  Postdoctoral Research Associate \\
-  Institute of Astronomy, University of Cambridge, UK \\
-  \faEnvelope\ \href{mailto:soh@ast.cam.ac.uk}{\tt soh@ast.cam.ac.uk}
-  \faHome\ \href{https://smoh.space}{\tt http://smoh.space}
-  \faFile*\ \href{https://ui.adsabs.harvard.edu/public-libraries/Slk-d10nSAe9qtCnvfJd8w}{ADS},
-    \href{https://arxiv.org/search/?query=semyeong+oh&searchtype=author&abstracts=show&order=-announced_date_first}{arxiv}
-    \faGithub\ \href{https://github.com/smoh}{{\tt smoh}}
+	\makecvheader
+
+	\makecvfooter
+		{\textsc{ \selectlanguage{english}\today }}
+		{\textsc{Semyeong Oh - CV}}
+		{\thepage/\pageref*{LastPage}}
+
+	\input{research_interests}
+	\input{appointments}				% Section scholarité
+	% \input{section_competences_short}				% Section compétence
+	\input{pubs}
+	\input{advising}		% Section expérience
+	% \input{section_langues}					% Section langues
+	%\input{section_interets}				% Section intérêts
 
 
-\section*{Research Interests}
 
-dynamics of disruption of stellar multiples revealed by {\it Gaia};
-scientific applications of statistical inference and machine learning
 
-\section*{Education}
 
-\begin{itemize}
-  \setlength\itemsep{0em}
-  \item Ph.D. Astrophysics, Princeton University, 2018. 9. 
-    advisor: David N. Spergel
 
-  \item M.A. Astrophysics, Princeton University, 2015. 6.
+\sectionTitle{Recent Talks}{\faComments}
 
-  %\item Integrated MA/PhD Program in Astronomy\\
-  %  left in 2nd yr with no degree conferred (advisor: Jong-Hak Woo)
+\begin{talks}
+	% \talkentry{2019/04}{KITP}
+	\talkentry{2017/11}{Comoving stars in Gaia DR1, Seminar, Columbia University}
+	\talkentry{2017/05}{Comoving stars in Gaia DR1, Thunch, Princeton University}
+	\talkentry{2017/02}{American Museum of Natural History, Comoving stars in Gaia DR1}
+\end{talks}
 
-  \item B.Sc. Physics, Seoul National University, 2011. 2.
-\end{itemize}
+\sectionTitle{Honors}{\faAward}
 
-\section*{Recent Talks}
+\begin{honors}
+	\honorentry{2012/08 -- 2013/02}
+		{Graduate Fellowship, Seoul National University}
+	\honorentry{2011/03 -- 2012/08}
+		{Brain Korea 21 Graduate Scholarship, Seoul National University}
+	\honorentry{2007/03 -- 2011/02}
+		{National Scholarship, Korean Student Aid Foundation}
+\end{honors}
 
-\begin{itemize}
-  \setlength{\itemsep}{0em}
-
-  \item Comoving stars in Gaia DR1, Seminar, Columbia University\hfill 2017 Nov
-  \item Comoving stars in Gaia DR1, Thunch, Princeton University\hfill 2017 May
-  \item Comoving stars in Gaia DR1, Seminar, AMNH ({\it invited})\hfill 2017 Feb
-\end{itemize}
-
-\section*{Honors \& Awards}
-
-\begin{itemize}
-  \setlength{\itemsep}{0em}
-
-  \item Graduate Fellowship, Seoul National University \hfill 2012/08 -- 2013/02
-  \item Brain Korea 21 Graduate Scholarship, Seoul National University\hfill 2011/03 -- 2012/08
-	\item National Scholarship, Korean Student Aid Foundation\hfill 2007/03 -- 2011/02
-\end{itemize}
-
-\section*{Observing}
-\begin{itemize}
-  \item Searching for Evidence of Planet Migration in the Beehive (co-I)\hfill 2018 Spring\\
-    3 nights, Keck I
-  \item Comoving pairs in {\it Gaia} DR1 (co-I)\hfill 2017 Mar\\
-    6 nights, Hiltner 2.4m, MDM Observatory, AZ
-\end{itemize}
-
-\section*{Mentoring \& Teaching}
-
-\begin{itemize}
-  \setlength\itemsep{0em}
-  \item Undergraduate Summer Research Program, Princeton University\hfill 2016 Summer
-    \begin{adjustwidth}{15pt}{}
-      Worked with Anna Juranova (Masaryk University) and David Spergel to
-      investigate orbits in a barred galaxy potential and implemented a new
-      potential {\tt FerrersPotential} in galactic dynamics code \href{http://galpy.readthedocs.io/en/latest/}{\tt galpy}.
-    \end{adjustwidth}
-  \item Assistant in Instruction for Cosmology, Princeton University\hfill 2015 Spring, 2013 Spring
-\end{itemize}
-
-\bigskip
-
-% Footer
-\begin{center}
-  \begin{footnotesize}
-    Last updated: \today \\
-  \end{footnotesize}
-\end{center}
+	% \input{section_projets}
+	% \input{section_references} 				% Section références
 
 \end{document}

@@ -1,169 +1,96 @@
-% SMOH publication list
-\documentclass[11pt,letterpaper]{article}
+% publications
+\sectionTitle{Publications}{\faPenNib}
 
-\usepackage{hyperref}
-\usepackage[includehead]{geometry}
-\usepackage{color}
-\usepackage{etaremune}
-\usepackage{microtype}
-% Comment the following lines to use the default Computer Modern font
-% instead of the Palatino font provided by the mathpazo package.
-% Remove the 'osf' bit if you don't like the old style figures.
-%\usepackage[T1]{fontenc}
-%\usepackage[sc,osf]{mathpazo}
+refereed: 9, lead author: 6, citations: 1249, h-index: 7 (2020-07-30)
+\link{https://ui.adsabs.harvard.edu/public-libraries/Slk-d10nSAe9qtCnvfJd8w}{\cvtag{ADS}}
+\link{https://arxiv.org/find/all/1/all:+AND+semyeong+oh/0/1/0/all/0/1}{\cvtag{arXiv}}
 
-% This should come before header stuff.
-\geometry{
-  body={6.5in, 8.75in},
-  left=1.0in,
-  top=1.0in
-}
-
-% Custom section
-\usepackage{titlesec}
-\titleformat{\section}[runin]
-  {\rmfamily\mdseries\Large}{\thesection}{1em}{}
-\titleformat{\subsection}[runin]
-  {\rmfamily\mdseries\itshape\large}{\thesection}{1em}{}
-
-% Custom header for page number
-\usepackage{fancyhdr}
-\usepackage{lastpage}
-\pagestyle{fancy}
-\fancyhf{}    % clear all header and footer fields
-\lhead{{\LARGE Semyeong Oh}}
-\rhead{Publications -- Page \thepage \hspace{1pt} of \pageref*{LastPage}}
-\chead{}
-\renewcommand{\headrulewidth}{0pt}
-
-% Don't indent paragraphs.
-\setlength\parindent{0em}
-
-% Make lists without bullets
-\renewenvironment{itemize}{
-  \begin{list}{}{
-    \setlength{\leftmargin}{1.5em}
-  }
-}{
-  \end{list}
-}
-
-% Set your name here
-\def\name{Semyeong Oh}
-
-\definecolor{oceanboatblue}{rgb}{0.0, 0.47, 0.75}
-% The following metadata will show up in the PDF properties
-\hypersetup{
-  colorlinks = true,
-  urlcolor = blue,
-  pdfauthor = {\name},
-  pdftitle = {\name: Curriculum Vitae},
-  pdfsubject = {Curriculum Vitae},
-  pdfpagemode = UseNone
-}
-
-\usepackage{aas_macros}
-\usepackage{amsmath,amssymb}
-\newcommand{\lt}{\ensuremath{<}}    % because I screwed up in a paper title...
-\newcommand*\arxiv[1]{\href{https://arxiv.org/abs/#1}{\small arXiv:#1}}
-\newcommand{\etal}{\textit{et al}.}
-\newcommand{\pubtitle}[1]{#1}
-\newcommand{\doi}[2]{\pubtitle{\href{http://dx.doi.org/#1}{{#2}}}}
-\newcommand{\inclso}{(incl. {\bf Oh, S.})}
-\newcommand{\submitted}[1]{submitted to #1}
-
-\bibliographystyle{plain}
-
-\begin{document}
-
-\noindent
-Links to \href{https://arxiv.org/find/all/1/all:+AND+semyeong+oh/0/1/0/all/0/1}{arXiv}
-\href{https://ui.adsabs.harvard.edu/public-libraries/Slk-d10nSAe9qtCnvfJd8w}{ADS}
-
-\section*{\small Lead author}
+\subsection*{Lead author}
 
 \begin{etaremune}
 
-  % \item
-  %   \pubtitle{Kinematic modelling of clusters with {\it Gaia}: the death throes of the Hyades}\\
-  %   {\bf {Oh}, S.} and {Evens}, N.~W.,
-  %   2020,
-  %   \submitted{\mnras}
-  %   \arxiv{????}
+  \item
+    \pubtitle{Kinematic modelling of clusters with {\it Gaia}: the death throes of the Hyades}\\
+    {\bf {Oh}, S.} and {Evens}, N.~W.,
+    2020,
+    \submitted{\mnras}\\
+    \arxiv{2007.02969} \link{https://github.com/smoh/kinesis}{\cvtag{code}}
 
   \item
     \doi{10.3847/1538-4357/aaab4d}{
       Kronos \& Krios: Evidence for accretion of rocky planets in a comoving pair of sun-like stars}\\
     {\bf {Oh}, S.}, {Price-Whelan}, A.~M., {Brewer}, J.~M. \etal,
     2018,
-    \apj, 854, 138
+    \apj, 854, 138\\
     \arxiv{1709.05344}
 
   \item 
     \pubtitle{Comoving Stars in Gaia DR1: An Abundance of Very Wide Separation Comoving Pairs}\\
     {\bf {Oh}, S.}, {Price-Whelan}, A.~M., {Hogg}, D.~W. \etal,
     2017,
-    \aj, 153, 257
-    \arxiv{1612.02440}
+    \aj, 153, 257\\
+	\arxiv{1612.02440} \link{https://github.com/smoh/gaia-comoving-stars}{\cvtag{code}}
+	\link{https://smoh.space/gaia-comoving-stars}{\cvtag{visualization}}
 
   \item 
     \pubtitle{Testing the Presence of Multiple Photometric Components in Nearby Early-type Galaxies using SDSS}\\
     {{\bf {Oh}, S.}, {Greene}, J.~E., {Lackner}, C.~N.},
     2017,
-    \apj, 836, 115
-		\arxiv{1612.06495}
+    \apj, 836, 115\\
+	\arxiv{1612.06495}
 
   \item 
     \pubtitle{The Active Galactic Nucleus Population in X-Ray-selected Galaxy Groups at $0.5 < z < 1.1$}\\
     {\bf {Oh}, S.}, {Mulchaey}, J.~S., {Woo}, J.-H. \etal,
     2014,
-    \apj, 790, 43
-		\arxiv{1406.3059}
+    \apj, 790, 43\\
+	\arxiv{1406.3059}
 
   \item 
     \pubtitle{The Extended Narrow-line Region of Two Type-I Quasi-stellar Objects}\\
     {\bf {Oh}, S.}, {Woo}, J.-H., {Bennert}, V.~N. \etal,
     2013,
-    \apj, 767, 117
+    \apj, 767, 117\\
     \arxiv{1303.6212}
 \end{etaremune}
 
-\section*{\small Contributing author}
+\subsection*{Contributing  author}
 
 \begin{etaremune}
 
   \item \pubtitle{Unresolved stellar companions with Gaia DR2 astrometry}\\
     {Belokurov}, V., {Penoyre}, Z., {\bf {Oh}, S.}, {Iorio}, G. \etal,
-    2020, \submitted{\mnras}
+	2020,
+	\mnras, 496, 1922\\
     \arxiv{2003.05467}
   
   \item \pubtitle{Spectroscopy of the Young Stellar Association Price-Whelan 1: Origin in the Magellanic Leading Arm and Constraints on the Milky Way Hot Halo}\\
   {Nidever}, D. L., {Price-Whelan}, A. M., {Choi}, Y. \etal\ \inclso,
   2019,
-  \apj, 887, 115
+  \apj, 887, 115\\
   \arxiv{1910.05360}
   
   \item \pubtitle{The Astropy Project: Building an Open-science Project and Status of the v2.0 Core Package}\\
   {Astropy Collaboration} \inclso,
   2018,
-  \aj, 156, 123
+  \aj, 156, 123\\
   \arxiv{1801.02634}
 
 \end{etaremune}
 
-\section*{\small Preprints and other}
+\subsection*{Preprints and other}
 
 \begin{etaremune}
   \item \pubtitle{LRP2020: The Opportunity of Young Nearby Associations with the Advent of the Gaia Mission}\\
   {Gagn{\'e}}, J., {Kastner}, J., {\bf {Oh}, S} \etal,
-  2019
+  2019\\
   \arxiv{1911.05143}
   
 
   \item \pubtitle{Spectroscopic Confirmation of Very-wide stellar binaries and
       large-separation comoving pairs from Gaia DR1}\\
     {Price-Whelan}, A.~M., {\bf {Oh}, S.}, {Spergel}, D.~N.,
-    2017
+    2017\\
     \arxiv{1709.03532}
 
   \item \pubtitle{Detecting Gas Outflows in Type-2 AGNs Selected from the Sloan Digital Sky Survey}\\
@@ -172,16 +99,3 @@ Links to \href{https://arxiv.org/find/all/1/all:+AND+semyeong+oh/0/1/0/all/0/1}{
   IAUS, 292
 
 \end{etaremune}
-
-
-
-\bigskip
-
-% Footer
-\begin{center}
-  \begin{footnotesize}
-    Last updated: \today \\
-  \end{footnotesize}
-\end{center}
-
-\end{document}
